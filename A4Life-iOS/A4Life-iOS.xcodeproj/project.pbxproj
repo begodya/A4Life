@@ -50,6 +50,8 @@
 		3B02051F1CB3BE0A00BB6B6A /* AFLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02051D1CB3BE0A00BB6B6A /* AFLHomeViewController.swift */; };
 		3B0205201CB3BE0A00BB6B6A /* AFLHomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B02051E1CB3BE0A00BB6B6A /* AFLHomeViewController.xib */; };
 		3B0205241CB3BF0100BB6B6A /* AFLDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0205231CB3BF0100BB6B6A /* AFLDataSource.swift */; };
+		3B0205271CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0205251CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.swift */; };
+		3B0205281CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0205261CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +123,8 @@
 		3B02051D1CB3BE0A00BB6B6A /* AFLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFLHomeViewController.swift; sourceTree = "<group>"; };
 		3B02051E1CB3BE0A00BB6B6A /* AFLHomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFLHomeViewController.xib; sourceTree = "<group>"; };
 		3B0205231CB3BF0100BB6B6A /* AFLDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFLDataSource.swift; sourceTree = "<group>"; };
+		3B0205251CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFLHomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		3B0205261CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFLHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,6 +406,8 @@
 		3B02051B1CB3BDDD00BB6B6A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3B0205251CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.swift */,
+				3B0205261CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -537,6 +543,7 @@
 				3B0205201CB3BE0A00BB6B6A /* AFLHomeViewController.xib in Resources */,
 				3B0205071CB3BD4D00BB6B6A /* Geometry.gif in Resources */,
 				3B02049E1CB3BBBC00BB6B6A /* LaunchScreen.storyboard in Resources */,
+				3B0205281CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib in Resources */,
 				3B02049B1CB3BBBC00BB6B6A /* Assets.xcassets in Resources */,
 				3B0204991CB3BBBC00BB6B6A /* Main.storyboard in Resources */,
 				3B0205021CB3BD4D00BB6B6A /* BBH5ViewController.xib in Resources */,
@@ -596,6 +603,7 @@
 				3B0204FA1CB3BD4D00BB6B6A /* MenuSegue.swift in Sources */,
 				3B0205191CB3BD4D00BB6B6A /* BBRootViewController.swift in Sources */,
 				3B02050F1CB3BD4D00BB6B6A /* BBTableViewCell.swift in Sources */,
+				3B0205271CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.swift in Sources */,
 				3B02050D1CB3BD4D00BB6B6A /* UIScrollView+PullToRefresh.swift in Sources */,
 				3B02050E1CB3BD4D00BB6B6A /* BBTableView.swift in Sources */,
 			);
