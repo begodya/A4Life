@@ -43,19 +43,19 @@ class BBRootViewController: UIViewController, UINavigationControllerDelegate, UI
     private func configLeftBarButtonItem() {
         if (self.navigationController != nil) {
             if (self.navigationController?.viewControllers.count > 1) {
-                self.setBackBarButtonWithTarget(self, action: Selector("clickedBackBarButtonAction"))
+                self.setBackBarButtonWithTarget(self, action: #selector(BBRootViewController.clickedBackBarButtonAction))
             } else if (self.navigationController?.viewControllers.count == 1) {
                 var rootViewController = applicationWindow_.rootViewController
                 if ((rootViewController?.isKindOfClass(BBNavigationController)) != nil) {
                     let tempViewController: BBNavigationController = rootViewController as! BBNavigationController
                     rootViewController = tempViewController.topViewController
                     if (rootViewController?.presentedViewController != nil) {
-                        self.setCloseBarButtonWithTarget(self, action: Selector("clickedCloseBarButtonAction"))
+                        self.setCloseBarButtonWithTarget(self, action: #selector(BBRootViewController.clickedCloseBarButtonAction))
                     }
                 }
             }
         } else {
-            self.setCloseBarButtonWithTarget(self, action: Selector("clickedCloseBarButtonAction"))
+            self.setCloseBarButtonWithTarget(self, action: #selector(BBRootViewController.clickedCloseBarButtonAction))
         }
     }
     

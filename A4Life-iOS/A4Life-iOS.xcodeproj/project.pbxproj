@@ -54,6 +54,7 @@
 		3B0205281CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B0205261CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib */; };
 		3B02052B1CB7900600BB6B6A /* AFLDateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B0205291CB7900600BB6B6A /* AFLDateViewController.swift */; };
 		3B02052C1CB7900700BB6B6A /* AFLDateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B02052A1CB7900600BB6B6A /* AFLDateViewController.xib */; };
+		3B02052E1CB799F500BB6B6A /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B02052D1CB799F500BB6B6A /* UIImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +130,7 @@
 		3B0205261CB4F58E00BB6B6A /* AFLHomeCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFLHomeCollectionViewCell.xib; sourceTree = "<group>"; };
 		3B0205291CB7900600BB6B6A /* AFLDateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFLDateViewController.swift; sourceTree = "<group>"; };
 		3B02052A1CB7900600BB6B6A /* AFLDateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AFLDateViewController.xib; sourceTree = "<group>"; };
+		3B02052D1CB799F500BB6B6A /* UIImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -382,6 +384,7 @@
 				3B0204F11CB3BD4D00BB6B6A /* String.swift */,
 				3B0204F21CB3BD4D00BB6B6A /* UIImageView.swift */,
 				3B0204F31CB3BD4D00BB6B6A /* UIView.swift */,
+				3B02052D1CB799F500BB6B6A /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -604,6 +607,7 @@
 				3B0204FB1CB3BD4D00BB6B6A /* MenuTransitionAnimator.swift in Sources */,
 				3B0205151CB3BD4D00BB6B6A /* UIImageView.swift in Sources */,
 				3B0204FD1CB3BD4D00BB6B6A /* CircularRevealAnimator.swift in Sources */,
+				3B02052E1CB799F500BB6B6A /* UIImage.swift in Sources */,
 				3B0205141CB3BD4D00BB6B6A /* String.swift in Sources */,
 				3B0205121CB3BD4D00BB6B6A /* BBDevice.swift in Sources */,
 				3B0205131CB3BD4D00BB6B6A /* BBFont.swift in Sources */,

@@ -17,6 +17,8 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
 
         // Do any additional setup after loading the view.
         self.setCustomTitle("A4 Life")
+        self.setRightBarButtonWithTitle("年份", target: self, action: #selector(clickedYearButtonAction))
+    
         self.contentCollectionView.backgroundColor = BBColor.defaultColor()
         self.contentCollectionView.registerClass(AFLHomeCollectionViewCell.self, forCellWithReuseIdentifier: "AFLHomeCollectionViewCell")
     }
@@ -29,7 +31,10 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
     // MARK: - --------------------功能函数--------------------
     
     // MARK: - --------------------手势事件--------------------
-    // MARK: 各种手势处理函数注释
+    func clickedYearButtonAction() {
+        self.showDatePage()
+    }
+
     
     // MARK: - --------------------按钮事件--------------------
     // MARK: 按钮点击函数注释
@@ -65,9 +70,10 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
     
     // MARK: - --------------------接口API--------------------
     func showDatePage() {
-        self.navigationController?.presentViewController(AFLDateViewController(), animated: false, completion: {
-            
-        })
+//        self.navigationController?.presentViewController(AFLDateViewController(), animated: false, completion: {
+//            
+//        })
+        self.navigationController?.pushViewController(AFLDateViewController(), animated: false)
     }
 
 }

@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AFLDateViewController" customModule="A4Life_iOS" customModuleProvider="target">
             <connections>
+                <outlet property="pickerButton" destination="uh3-UK-9OY" id="9GD-2j-JAi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="yearPicker" destination="xGU-J9-sdO" id="XCx-pt-yBQ"/>
             </connections>
@@ -17,18 +18,29 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGU-J9-sdO">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="koR-sO-K0E"/>
                         <outlet property="delegate" destination="-1" id="dII-PN-Q4o"/>
                     </connections>
                 </pickerView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uh3-UK-9OY">
+                    <rect key="frame" x="30" y="535" width="540" height="50"/>
+                    <state key="normal" title="选择出生年份"/>
+                    <connections>
+                        <action selector="clickedPickerButton:" destination="-1" eventType="touchUpInside" id="KJK-5h-8rh"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="xGU-J9-sdO" secondAttribute="bottom" id="Irg-7c-NyV"/>
+                <constraint firstItem="uh3-UK-9OY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="66c-kR-1Kp"/>
+                <constraint firstAttribute="bottom" secondItem="xGU-J9-sdO" secondAttribute="bottom" constant="80" id="Irg-7c-NyV"/>
+                <constraint firstAttribute="bottom" secondItem="uh3-UK-9OY" secondAttribute="bottom" constant="15" id="V31-cp-hVO"/>
+                <constraint firstItem="uh3-UK-9OY" firstAttribute="top" secondItem="xGU-J9-sdO" secondAttribute="bottom" constant="15" id="br1-0q-1kU"/>
                 <constraint firstAttribute="trailing" secondItem="xGU-J9-sdO" secondAttribute="trailing" id="f2T-wk-He1"/>
                 <constraint firstItem="xGU-J9-sdO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o25-fX-rnp"/>
+                <constraint firstAttribute="trailing" secondItem="uh3-UK-9OY" secondAttribute="trailing" constant="30" id="t54-wy-a5J"/>
                 <constraint firstItem="xGU-J9-sdO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w6U-uR-gNa"/>
             </constraints>
         </view>

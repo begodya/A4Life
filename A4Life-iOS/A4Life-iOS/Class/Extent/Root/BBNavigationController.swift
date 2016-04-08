@@ -39,7 +39,7 @@ class BBNavigationController: UINavigationController, UIGestureRecognizerDelegat
 //        }
         
 
-        let panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer.init(target: self, action: Selector("paningGestureReceive:"))
+        let panGesture: UIPanGestureRecognizer = UIPanGestureRecognizer.init(target: self, action: #selector(BBNavigationController.paningGestureReceive(_:)))
         panGesture.delaysTouchesBegan = true
         let gestureView: UIView = UIView.init(frame: CGRectMake(0, 64, 15, self.view.bounds.size.height))
         gestureView.addGestureRecognizer(panGesture)
