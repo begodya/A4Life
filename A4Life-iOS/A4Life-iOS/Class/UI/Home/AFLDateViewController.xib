@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AFLDateViewController" customModule="A4Life_iOS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="yearPicker" destination="xGU-J9-sdO" id="XCx-pt-yBQ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xGU-J9-sdO">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="koR-sO-K0E"/>
+                        <outlet property="delegate" destination="-1" id="dII-PN-Q4o"/>
+                    </connections>
+                </pickerView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xGU-J9-sdO" secondAttribute="bottom" id="Irg-7c-NyV"/>
+                <constraint firstAttribute="trailing" secondItem="xGU-J9-sdO" secondAttribute="trailing" id="f2T-wk-He1"/>
+                <constraint firstItem="xGU-J9-sdO" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="o25-fX-rnp"/>
+                <constraint firstItem="xGU-J9-sdO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="w6U-uR-gNa"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

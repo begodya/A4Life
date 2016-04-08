@@ -84,9 +84,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     private func setupStartViewController() {
-        self.window!.rootViewController = BBNavigationController(rootViewController: AFLHomeViewController())
+        let homePage = AFLHomeViewController()
+        self.window!.rootViewController = BBNavigationController(rootViewController: homePage)
         self.window!.backgroundColor = UIColor.whiteColor()
         self.window!.makeKeyAndVisible()
+        
+        homePage.showDatePage()
     }
     
     // MARK: - --------------------手势事件--------------------

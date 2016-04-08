@@ -62,9 +62,12 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
     }
 
     // MARK: - --------------------属性相关--------------------
-    // MARK: 属性操作函数注释
     
     // MARK: - --------------------接口API--------------------
-    // MARK: 分块内接口函数注释
+    func showDatePage() {
+        self.navigationController?.presentViewController(AFLDateViewController(), animated: false, completion: {
+            
+        })
+    }
 
 }
