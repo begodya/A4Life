@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AFLHomeViewController" customModule="A4Life_iOS" customModuleProvider="target">
             <connections>
                 <outlet property="contentCollectionView" destination="PoV-Ug-Cbk" id="50b-7d-yzK"/>
+                <outlet property="contentLabel" destination="ffx-Lo-d4u" id="gxK-Fu-hw9"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="PoV-Ug-Cbk">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="AzF-iy-xzZ">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -29,13 +30,23 @@
                         <outlet property="delegate" destination="-1" id="CBk-Be-nkr"/>
                     </connections>
                 </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffx-Lo-d4u">
+                    <rect key="frame" x="0.0" y="450" width="600" height="150"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="PoV-Ug-Cbk" secondAttribute="trailing" id="0KA-zb-JgK"/>
+                <constraint firstItem="ffx-Lo-d4u" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EX4-pk-8Tv"/>
                 <constraint firstItem="PoV-Ug-Cbk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Gju-Ju-AGL"/>
-                <constraint firstAttribute="bottom" secondItem="PoV-Ug-Cbk" secondAttribute="bottom" id="PPg-8j-zXy"/>
+                <constraint firstItem="ffx-Lo-d4u" firstAttribute="top" secondItem="PoV-Ug-Cbk" secondAttribute="bottom" id="JuL-aC-CRp"/>
+                <constraint firstAttribute="bottom" secondItem="PoV-Ug-Cbk" secondAttribute="bottom" constant="150" id="PPg-8j-zXy"/>
+                <constraint firstAttribute="trailing" secondItem="ffx-Lo-d4u" secondAttribute="trailing" id="Zcj-Tk-hZU"/>
                 <constraint firstItem="PoV-Ug-Cbk" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="tVF-WV-Fbz"/>
+                <constraint firstAttribute="bottom" secondItem="ffx-Lo-d4u" secondAttribute="bottom" id="x4J-sM-5HV"/>
             </constraints>
         </view>
     </objects>

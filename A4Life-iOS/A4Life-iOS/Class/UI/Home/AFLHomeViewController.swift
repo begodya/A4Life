@@ -11,6 +11,8 @@ import UIKit
 class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UICollectionViewDataSource, AFLDateViewControllerDelegate {
 
     @IBOutlet weak var contentCollectionView: UICollectionView!
+    @IBOutlet weak var contentLabel: UILabel!
+    
     var birthYear: Int = 0
     
     // MARK: - --------------------System--------------------
@@ -19,7 +21,7 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
 
         // Do any additional setup after loading the view.
         self.setCustomTitle("A4 Life")
-        self.setRightBarButtonWithTitle("年份", target: self, action: #selector(clickedYearButtonAction))
+        self.setRightBarButtonWithTitle("75", target: self, action: #selector(clickedYearButtonAction))
     
         self.contentCollectionView.backgroundColor = BBColor.defaultColor()
         self.contentCollectionView.registerClass(AFLHomeCollectionViewCell.self, forCellWithReuseIdentifier: "AFLHomeCollectionViewCell")
@@ -62,7 +64,15 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
             if indexPath.item <= 18*12 {
                 cell.backgroundColor = UIColor.blueColor()
             } else if indexPath.item <= 22*12 {
+                cell.backgroundColor = UIColor.purpleColor()
+            } else if indexPath.item <= 30*12 {
                 cell.backgroundColor = UIColor.orangeColor()
+            } else if indexPath.item <= 40*12 {
+                cell.backgroundColor = UIColor.magentaColor()
+            } else if indexPath.item <= 50*12 {
+                cell.backgroundColor = UIColor.brownColor()
+            } else if indexPath.item <= 60*12 {
+                cell.backgroundColor = UIColor.darkGrayColor()
             } else {
                 cell.backgroundColor = UIColor.redColor()
             }
@@ -83,6 +93,23 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
     func selectBirthYear(year: Int) {
         birthYear = year
         self.contentCollectionView.reloadData()
+        
+        if getCurrentYear()-birthYear <= 18 {
+            self.contentLabel.text = "青春，一旦和它紧紧地握手，就能获得开拓新途径的动力，拥有创造性人生的灵性。"
+        } else if getCurrentYear()-birthYear <= 22 {
+            self.contentLabel.text = "成长的过程就是破茧为蝶，挣扎着褪掉所有的青涩和丑陋，在阳光下抖动轻盈美丽的翅膀，闪闪的，微微的，幸福的，颤抖。 "
+        } else if getCurrentYear()-birthYear <= 30 {
+            self.contentLabel.text = "迈向而立之年"
+        } else if getCurrentYear()-birthYear <= 40 {
+            self.contentLabel.text = "迈向不惑之年"
+        } else if getCurrentYear()-birthYear <= 50 {
+            self.contentLabel.text = "迈向知天命之年 "
+        } else if getCurrentYear()-birthYear <= 60 {
+            self.contentLabel.text = "迈向花甲之年"
+        } else {
+            self.contentLabel.text = "人生苦短，能留下的就是最好的。"
+        }
+        
     }
 
     // MARK: - --------------------属性相关--------------------
