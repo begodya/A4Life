@@ -166,13 +166,13 @@ class BBLoadingView: BBRootView {
     }
     
     class func dismissOnTap (didTap: (() -> Void)? = nil) {
-        self.sharedInstance.tapGesture = UITapGestureRecognizer(target: self, action: "userTapped")
+        self.sharedInstance.tapGesture = UITapGestureRecognizer(target: self, action: #selector(BBLoadingView.userTapped))
         self.sharedInstance.addGestureRecognizer(self.sharedInstance.tapGesture!)
         self.sharedInstance.didTapClosure = didTap
     }
     
     class func dismissOnSwipe (didTap: (() -> Void)? = nil) {
-        self.sharedInstance.swipeGesture = UISwipeGestureRecognizer(target: self, action: "userSwiped")
+        self.sharedInstance.swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(BBLoadingView.userSwiped))
         self.sharedInstance.addGestureRecognizer(self.sharedInstance.swipeGesture!)
     }
     

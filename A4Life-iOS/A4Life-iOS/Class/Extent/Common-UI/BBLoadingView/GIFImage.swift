@@ -122,7 +122,7 @@ class GIFImage: UIImage {
     
     // MARK: Private Properties
     
-    private lazy var displayLink: CADisplayLink = CADisplayLink(target: self, selector: "updateCurrentFrame")
+    private lazy var displayLink: CADisplayLink = CADisplayLink(target: self, selector: #selector(GIFImage.updateCurrentFrame))
     private lazy var preloadFrameQueue: dispatch_queue_t! = dispatch_queue_create("co.kaishin.GIFPreloadImages", DISPATCH_QUEUE_SERIAL)
     private var currentFrameIndex = 0
     private var imageSource: CGImageSource?
@@ -240,7 +240,7 @@ class GIFImage: UIImage {
         
         while timeSinceLastFrameChange >= frameDuration {
             timeSinceLastFrameChange -= frameDuration
-            currentFrameIndex++
+            currentFrameIndex += 1
             
             if currentFrameIndex >= frames.count {
                 currentFrameIndex = 0

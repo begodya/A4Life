@@ -31,13 +31,13 @@ class BBH5WebView: UIWebView {
     }
     
     func webViewDidStartLoad(webView: UIWebView) {
-        if (self.delegate!.respondsToSelector(Selector("webViewDidStartLoad:"))) {
+        if (self.delegate!.respondsToSelector(#selector(UIWebViewDelegate.webViewDidStartLoad(_:)))) {
             self.delegate!.webViewDidFinishLoad!(webView)
         }
     }
     
     func webViewDidFinishLoad(webView: UIWebView) {
-        if (self.delegate!.respondsToSelector(Selector("webViewDidFinishLoad:"))) {
+        if (self.delegate!.respondsToSelector(#selector(UIWebViewDelegate.webViewDidFinishLoad(_:)))) {
             self.delegate!.webViewDidFinishLoad!(webView)
         }
     }
