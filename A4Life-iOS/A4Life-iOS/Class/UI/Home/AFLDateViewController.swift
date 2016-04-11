@@ -8,11 +8,15 @@
 
 import UIKit
 
+protocol AFLDateViewControllerDelegate: NSObjectProtocol {
+    func selectBirthYear(year: Int)
+}
+
 class AFLDateViewController: BBRootViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var yearPicker: UIPickerView!
     @IBOutlet weak var pickerButton: UIButton!
-    
+    var delegate: AFLDateViewControllerDelegate?
     // MARK: - --------------------System--------------------
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,16 +55,23 @@ class AFLDateViewController: BBRootViewController, UIPickerViewDelegate, UIPicke
     // MARK: - --------------------按钮事件--------------------
     
     @IBAction func clickedPickerButton(sender: AnyObject) {
-        let okAction = UIAlertAction(title: "是的", style: UIAlertActionStyle.Default) { (handler) in
+//        let okAction = UIAlertAction(title: "是的", style: UIAlertActionStyle.Default) { (handler) in
+//            if (self.delegate != nil) {
+//                self.delegate?.selectBirthYear(1942+self.yearPicker.selectedRowInComponent(0))
+//                self.navigationController?.popViewControllerAnimated(true)
+//            }
+//        }
+//        let cancelAction = UIAlertAction(title: "放弃", style: UIAlertActionStyle.Default) { (handler) in
+//            
+//        }
+//        
+//        let alertController = BBAlertController.initWithTitle("", message: "您的出生年份为\(1942+self.yearPicker.selectedRowInComponent(0))", okAction: okAction, cancelAction: cancelAction)
+//        self.presentViewController(alertController, animated: true) {
+//
+//        }
+        if (self.delegate != nil) {
+            self.delegate?.selectBirthYear(1942+self.yearPicker.selectedRowInComponent(0))
             self.navigationController?.popViewControllerAnimated(true)
-        }
-        let cancelAction = UIAlertAction(title: "放弃", style: UIAlertActionStyle.Default) { (handler) in
-            
-        }
-        
-        let alertController = BBAlertController.initWithTitle("", message: "您的出生年份为\(1942+self.yearPicker.selectedRowInComponent(0))", okAction: okAction, cancelAction: cancelAction)
-        self.presentViewController(alertController, animated: true) {
-
         }
     }
     
