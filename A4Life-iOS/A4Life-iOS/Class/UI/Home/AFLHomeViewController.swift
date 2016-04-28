@@ -94,22 +94,26 @@ class AFLHomeViewController: BBRootViewController, UICollectionViewDelegate, UIC
         birthYear = year
         self.contentCollectionView.reloadData()
         
+        var tip = ""
         if getCurrentYear()-birthYear <= 18 {
-            self.contentLabel.text = "青春，一旦和它紧紧地握手，就能获得开拓新途径的动力，拥有创造性人生的灵性。"
+            tip = "青春，一旦和它紧紧地握手，就能获得开拓新途径的动力，拥有创造性人生的灵性。"
         } else if getCurrentYear()-birthYear <= 22 {
-            self.contentLabel.text = "成长的过程就是破茧为蝶，挣扎着褪掉所有的青涩和丑陋，在阳光下抖动轻盈美丽的翅膀，闪闪的，微微的，幸福的，颤抖。 "
+            tip = "成长的过程就是破茧为蝶，挣扎着褪掉所有的青涩和丑陋，在阳光下抖动轻盈美丽的翅膀，闪闪的，微微的，幸福的，颤抖。 "
         } else if getCurrentYear()-birthYear <= 30 {
-            self.contentLabel.text = "迈向而立之年"
+            tip = "迈向而立之年"
         } else if getCurrentYear()-birthYear <= 40 {
-            self.contentLabel.text = "迈向不惑之年"
+            tip = "迈向不惑之年"
         } else if getCurrentYear()-birthYear <= 50 {
-            self.contentLabel.text = "迈向知天命之年 "
+            tip = "迈向知天命之年 "
         } else if getCurrentYear()-birthYear <= 60 {
-            self.contentLabel.text = "迈向花甲之年"
+            tip = "迈向花甲之年"
         } else {
-            self.contentLabel.text = "人生苦短，能留下的就是最好的。"
+            tip = "人生苦短，能留下的就是最好的。"
         }
         
+        let have = "\r\n已悄然迈过" + String((getCurrentYear()-birthYear)*12) + "格\n"
+        let still = "还有" + String((900-(getCurrentYear()-birthYear)*12)) + "格"
+        self.contentLabel.text = tip + have + still
     }
 
     // MARK: - --------------------属性相关--------------------

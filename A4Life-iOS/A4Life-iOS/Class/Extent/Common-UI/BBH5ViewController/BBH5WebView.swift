@@ -26,7 +26,7 @@ class BBH5WebView: UIWebView {
         if (self.delegate!.respondsToSelector(Selector("webView: request: navigationType:"))) {
             return self.delegate!.webView!(webView, shouldStartLoadWithRequest: request, navigationType: navigationType)
         }
-        
+
         return true
     }
     
